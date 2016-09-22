@@ -1035,8 +1035,8 @@ class Box {
  * @param {boolean} isOpen Whether the door is opened or closed
  */
 class Door {
-	constructor() {
-		this.isOpen = false;
+	constructor(isOpen) {
+		this.isOpen = isOpen;
 	}
 }
 
@@ -1125,7 +1125,7 @@ var catBox = new Box(new Animal('Cat','female'),true);
 var christmasPresent = new Box('poster',false);
 
 // Create 2 doors
-var automaticDoor;
+var automaticDoor = new Door(true);
 var bankVault;
 
 // Create 2 shoes
