@@ -973,13 +973,11 @@ class BankAccount {
  * @param {string} species The animal species
  * @param {string} gender  male or female
  */
-class Animal {
-	constructor(species,gender) {
-		this.species = species;
-		this.gender = gender;
-	}
+function Animal(species,gender) {
+	this.species = species;
+	this.gender = gender;
 }
-
+	
 /**
  * Step 51
  *
@@ -1170,7 +1168,17 @@ var dinner = new Meal(['fish','vegetables']);
  *       Any other species => "Could not determine if warm-blooded"
  *
  */
-
+Animal.prototype.isWarmBlooded = function() {
+	console.log('this',this);
+	console.log('this.species',this.species);
+	if (this.species === 'Fish') {
+		return false;
+	} else if (this.species === 'Monkey' || this.species === 'Bird') {
+		return true;
+	} else {
+		return 'Could not determine if warm-blooded';
+	}
+}
 
 /* Step 82
  *
