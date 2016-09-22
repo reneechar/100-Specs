@@ -1096,7 +1096,11 @@ class Cookie {
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
-
+class Meal {
+	constructor(mealArr) {
+		this.foods = mealArr;
+	}
+}
 
 /**
  * Create a new instance of the Classes you defined above, below!
