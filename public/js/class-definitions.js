@@ -375,6 +375,24 @@ function browseURL(browser) {
  *
  */
 
+ /* if I only had to return the html element
+ let ul = document.createElement('ul');
+	livingOrganismClassification.forEach(classification => {
+		let li = document.createElement('li');
+		li.innerHTML = classification;
+		ul.appendChild(li);
+	});
+	
+	return ul;
+*/
+function listLivingOrgClass() {
+	let classStr = '<ul>';
+	for (var i = 0; i < livingOrganismClassification.length; i++) {
+		classStr += ('<li>' +livingOrganismClassification[i]+ '</li>');
+	}
+	classStr+='</ul>';
+	return classStr;
+}
 
 /* Step 26
  *
