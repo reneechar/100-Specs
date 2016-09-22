@@ -1073,8 +1073,8 @@ class House {
  * @param {boolean} isOn Whether the light is on or off
  */
 class Lightbulb {
-	constructor() {
-		this.isOn = false;
+	constructor(isOn) {
+		this.isOn = isOn;
 	}
 }
 
@@ -1137,7 +1137,7 @@ var singleStory = new House(1);
 var twoStory = new House(2);
 
 // Create 2 lightbulbs
-var incandescent;
+var incandescent = new Lightbulb(true);
 var halogen;
 
 // Create 2 cookies of different flavors
