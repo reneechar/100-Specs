@@ -12,7 +12,7 @@ var unicorn = null;
  * then assign it to be the value of "Atari"
  *
  */
-var videogame_system = 'Atari'
+var videogame_system = 'Atari';
 
 /* Step 3
  *
@@ -20,7 +20,7 @@ var videogame_system = 'Atari'
  * and assign the value of sahara_animal to "The Addax"
  *
  */
-
+var sahara_animal = 'The Addax';
 
 /* Step 4
  *
