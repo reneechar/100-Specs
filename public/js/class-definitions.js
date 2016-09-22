@@ -413,7 +413,17 @@ function listLivingOrgClass() {
  * @return {String}
  *
  */
+function getRandomInt(min,max) {
+	return Math.floor(Math.random()*(max-min))+min;
+}
 
+function favoritePlanet(currPlanet) {
+	if(planets.indexOf(currPlanet) < 0){
+		return `${currPlanet} is not a planet!`;
+	} else {
+		return `I'm from ${currPlanet}, but I wish I could go to ${planets[getRandomInt(0,planets.length)]}`;
+	}
+}
 
 /* Step 27
  *
