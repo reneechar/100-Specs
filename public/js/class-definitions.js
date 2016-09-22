@@ -635,6 +635,29 @@ class SolarSystem {
  *
  */
 
+class PrincessLeia extends Person {
+	constructor(name, money, age, gender){
+		super(name, money, age, gender)
+		this.isInTrouble = null;
+	}
+	shootsGun() {
+		this.isInTrouble = false;
+		return 'Leia shoots her gun wildly';
+	}
+	getsInTrouble() {
+		this.isInTrouble = true;
+		return 'Help me Obi-wan Kenobi, you\'re my only hope';
+	}
+	marries(person) {
+		if(person === 'Han Solo') {
+			return true;
+		} else if (person === 'Luke Skywalker') {
+			return 'Gross!';
+		}
+		return false;
+	}
+}
+
 
 /* Step 34
  *
