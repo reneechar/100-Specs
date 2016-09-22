@@ -1023,9 +1023,9 @@ class Shape {
  */
 
 class Box {
-	constructor(anything) {
+	constructor(anything, open) {
 		this.contents = anything;
-		this.isOpen = false;
+		this.isOpen = open;
 	}
 }
 /**
@@ -1121,7 +1121,7 @@ var square = new Shape(4);
 var hexagon = new Shape(6);
 
 // Create 2 boxes
-var catBox;
+var catBox = new Box(new Animal('Cat','female'),true);
 var christmasPresent;
 
 // Create 2 doors
