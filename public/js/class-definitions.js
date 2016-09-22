@@ -1022,7 +1022,12 @@ class Shape {
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
 
-
+class Box {
+	constructor(anything) {
+		this.contents = anything;
+		this.isOpen = false;
+	}
+}
 /**
  * Step 54
  *
