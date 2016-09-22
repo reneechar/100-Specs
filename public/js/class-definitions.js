@@ -588,7 +588,19 @@ class Garden {
  *   removePlanet
  *
  */
-
+class SolarSystem {
+	constructor() {
+		this.planets = [];
+	}
+	addPlanet() {
+		this.planets.push('Earth');
+	}
+	removePlanet() {
+		if(this.planets.length > 0) {
+			this.planets.pop();
+		} 
+	}
+}
 
 /* Step 33
  *
