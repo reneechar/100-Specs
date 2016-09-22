@@ -555,7 +555,22 @@ class Pen {
  *   grow
  *
  */
-
+class Garden {
+	constructor(total){
+		this.plantsTotal = total;
+		this.isWatered = false;
+	}
+	water() {
+		this.isWatered = true;
+	}
+	grow() {
+		if(this.isWatered) {
+			this.plantsTotal++;
+		} else {
+			return false;
+		}
+	}
+}
 
 /* Step 32
  *
