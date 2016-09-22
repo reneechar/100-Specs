@@ -1005,7 +1005,15 @@ class Vehicle {
  *
  */
 
-
+class Shape {
+	constructor(number) {
+		if(number > 3){
+			this.sides = number;
+		} else {
+			this.sides = null;
+		}
+	} 
+}
 /**
  * Step 53
  *
