@@ -309,6 +309,13 @@ function addNumbers(num1, num2) {
  *
  */
 
+function installLinux(type) {
+	if(linuxFlavors.indexOf(type) >= 0) {
+		return true;
+	} else {
+		return false;
+	}
+};
 
 /* Step 23
  *
