@@ -1370,8 +1370,8 @@ var polygon =(new Shape(12)).getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox = christmasPresent.openBox();
-var closeAnOpenBox = catBox.openBox();
+var openAClosedBox = (new Box('rocks',false)).openBox();
+var closeAnOpenBox = (new Box('gems',true)).openBox();
 
 
  /* Step 95
@@ -1380,8 +1380,8 @@ var closeAnOpenBox = catBox.openBox();
  * and assign the values to each variable below.
  *
  */
-var openAClosedDoor;
-var closeAnOpenDoor;
+var openAClosedDoor = (new Door(false)).openClose();
+var closeAnOpenDoor = (new Door(true)).openClose();
 
 
 /* Step 96
