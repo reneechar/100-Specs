@@ -1337,11 +1337,10 @@ Meal.prototype.containsJunkFood = function() {
  * and assign the values to each variable below.
  *
  */
-var doggie = new Animal('Dog','female');
 
 var warmBloodedAnimal = george.isWarmBlooded();
 var coldBloodedAnimal = nemo.isWarmBlooded();
-var notWarmOrColdAnimal = doggie.isWarmBlooded();
+var notWarmOrColdAnimal = (new Animal('Dog','female')).isWarmBlooded();
 
 
 /* Step 92
@@ -1360,8 +1359,9 @@ var forwardDriving = forte.drive();
  * and assign the values to each variable below.
  *
  */
-var decagon;
-var polygon;
+
+var decagon = (new Shape(10)).getType();
+var polygon =(new Shape(12)).getType();
 
 
 /* Step 94
