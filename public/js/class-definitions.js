@@ -1350,8 +1350,8 @@ var notWarmOrColdAnimal = doggie.isWarmBlooded();
  * and assign the values to each variable below.
  *
  */
-var streetDriving;
-var forwardDriving;
+var streetDriving = civic.drive('kamehameha');
+var forwardDriving = forte.drive();
 
 
  /* Step 93
