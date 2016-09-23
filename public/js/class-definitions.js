@@ -1052,10 +1052,8 @@ function Shoe (size,color) {
  * @param {number} stories How many stories tall the house is
  */
 
-class House {
-	constructor(stories) {
-		this.stories = stories;
-	} 
+function House(stories) {
+	this.stories = stories; 
 }
 /**
  * Step 57
@@ -1266,7 +1264,13 @@ Shoe.prototype.findShoes = function() {
  * storiesTooTall, return true, else return false.
  *
  */
-
+House.prototype.isATallStory = function(storiesTooTall) {
+	if(this.stories >= storiesTooTall) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
  /* Step 88
  *
