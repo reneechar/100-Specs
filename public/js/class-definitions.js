@@ -1041,11 +1041,9 @@ function Door(isOpen) {
  * @param {string} color The shoe color
  */
 
-class Shoe {
-	constructor(size,color) {
-		this.size = size;
-		this.color = color;
-	}
+function Shoe (size,color) {
+	this.size = size;
+	this.color = color;
 }
 /**
  * Step 56
@@ -1256,7 +1254,9 @@ Door.prototype.openClose = function() {
  * the color and size of the shoe ("Found red shoes of size 7").
  *
  */
-
+Shoe.prototype.findShoes = function() {
+	return `Found ${this.color} shoes of size ${this.size}`;
+}
 
  /* Step 87
  *
