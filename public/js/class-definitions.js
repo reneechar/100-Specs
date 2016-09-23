@@ -1003,13 +1003,11 @@ class Vehicle {
  *
  */
 
-class Shape {
-	constructor(number) {
-		if(number > 3){
-			this.sides = number;
-		} else {
-			this.sides = null;
-		}
+function Shape(number) {
+	if(number >= 3){
+		this.sides = number;
+	} else {
+		this.sides = null;
 	} 
 }
 /**
@@ -1169,8 +1167,6 @@ var dinner = new Meal(['fish','vegetables']);
  *
  */
 Animal.prototype.isWarmBlooded = function() {
-	console.log('this',this);
-	console.log('this.species',this.species);
 	if (this.species === 'Fish') {
 		return false;
 	} else if (this.species === 'Monkey' || this.species === 'Bird') {
@@ -1212,6 +1208,15 @@ Vehicle.prototype.drive = function(streetName) {
  * Any other number => "Could not determine type"
  *
  */
+
+Shape.prototype.getType = function() {
+	let types = ['triangle','quadrilateral','pentagon','hexagon','heptagon','octagon','nonagon','decagon'];
+	if(this.sides >= 3 && this.sides <= 10){
+		return types[this.sides-3];
+	} else {
+		return 'Could not determine type';
+	}
+}
 
 
 /* Step 84
