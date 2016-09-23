@@ -1018,11 +1018,10 @@ function Shape(number) {
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
 
-class Box {
-	constructor(anything, open) {
-		this.contents = anything;
-		this.isOpen = open;
-	}
+function Box (anything, open) {
+	this.contents = anything;
+	this.isOpen = open;
+	
 }
 /**
  * Step 54
@@ -1228,7 +1227,14 @@ Shape.prototype.getType = function() {
  *
  */
 
-
+Box.prototype.openBox = function() {
+	if(this.isOpen) {
+		return false;
+	} else {
+		this.isOpen = true;
+		return true;
+	}
+}
  /* Step 85
  *
  * Declare a Door method called openClose that opens the door
