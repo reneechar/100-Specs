@@ -1071,10 +1071,8 @@ function Lightbulb (isOn) {
  * Cookie class
  * @param {string} flavor The cookie's flavor
  */
-class Cookie {
-	constructor(flavor){
-		this.flavor = flavor;
-	}
+function Cookie(flavor){
+	this.flavor = flavor;
 }
 
 /**
@@ -1297,7 +1295,13 @@ Lightbulb.prototype.flipSwitch = function(on) {
  *
  */
 
-
+Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek) {
+	if(dayOfTheWeek === 'Monday' && this.flavor === 'chocolate') {
+		return true;
+	} else {
+		return false;
+	}
+}
  /* Step 90
  *
  * Declare a Meal method called containsJunkFood that returns true if
