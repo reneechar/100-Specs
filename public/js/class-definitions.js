@@ -1061,10 +1061,8 @@ function House(stories) {
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
-class Lightbulb {
-	constructor(isOn) {
-		this.isOn = isOn;
-	}
+function Lightbulb (isOn) {
+	this.isOn = isOn;
 }
 
 /**
@@ -1282,7 +1280,15 @@ House.prototype.isATallStory = function(storiesTooTall) {
  *
  */
 
-
+Lightbulb.prototype.flipSwitch = function(on) {
+	if (on === 'on') {
+		this.isOn = true;
+		return true;
+	} else {
+		this.isOn = false;
+		return false;
+	}
+}
  /* Step 89
  *
  * Declare a Cookie method called swipedByCookieMonster that accepts
