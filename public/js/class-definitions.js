@@ -1081,10 +1081,8 @@ function Cookie(flavor){
  * Meal class
  * @param {Array} foods All the foods in the meal
  */
-class Meal {
-	constructor(mealArr) {
-		this.foods = mealArr;
-	}
+function Meal(mealArr) {
+	this.foods = mealArr;
 }
 
 /**
@@ -1315,7 +1313,16 @@ Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek) {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
-
+Meal.prototype.containsJunkFood = function() {
+	let junkFood = ['chips','soda','ice cream', 'popcorn','candy'];
+	let junkFoodInMeal = false;
+	this.foods.forEach((mealItem) => {
+		if(junkFood.indexOf(mealItem) > -1) {
+			return junkFoodInMeal = true;
+		}
+	});
+	return junkFoodInMeal;
+}
 
  /* Steps 91 to 100
  *
